@@ -1,3 +1,5 @@
+// // Problem 01
+
 
 function calculateTax(income, expenses) {
      if(0>income || 0>expenses || income < expenses){
@@ -33,20 +35,22 @@ console.log(emailSend)
 
 
 // Problem 03
+
 function checkDigitsInName(name) {
   for(let i=0;i<name.length; i++){
     if(!isNaN(name[i])){
-      return true
+     return true
+   }
+ }
+   
+     if(typeof name !== 'string') {
+         return "Invalid Input"
     }
-  }
-    
-      if(typeof name !== 'string') {
-          return "Invalid Input"
+       else{
+         return false;
+       }
      }
-        else{
-          return false;
-        }
-}
+    
 let input = checkDigitsInName(["Raj"])
 console.log(input);
 
@@ -63,15 +67,15 @@ if (typeof obj !== "object")
 let totalMarks = obj.testScore + obj.schoolGrade
   if(obj.isFFamily){
      totalMarks = totalMarks + (totalMarks * 0.2) 
-  }
-  if(totalMarks >=80){
+    }
+    if(totalMarks >=80){
     return true
   }
   else{
     return false
   }
 }
-const person={ name: "Rajib", testScore: 45,  schoolGrade: 25, isFFamily : true  } 
+const person={ name: "Rajib", testScore: 15,  schoolGrade: 25, isFFamily : true  }
 let details=calculateFinalScore(person)
 console.log(details)
 
